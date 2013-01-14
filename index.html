@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Suscripciones</title>
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+
+	</head>
+	<body>
+		<div class="row-fluid">
+			<div clas="span10">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container">
+							<a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+							<a class="brand" href="#">Suscripciones</a>
+							<div class="nav-collapse collapse navbar-responsive-collapse">
+								<ul id="myTab" class="nav">
+									<li class="active">
+										<a href="#">Inicio</a>
+									</li>
+									<li>
+										<a href="#">Preguntas Frecuentes</a>
+									</li>
+									<li>
+										<a href="#">Atencion al Cliente</a>
+									</li>
+									<li>
+										<a href="#">Suscripción Online</a>
+									</li>
+								</ul>
+
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span2" >
+					<div class="well" style="max-width: 340px; padding: 8px 0;">
+						<div class="navder">
+							<ul class="nav nav-list">
+								<li class="nav-header">
+									Planes de Suscripción
+								</li>
+								<li class="active">
+									<a href="#">Arica</a>
+								</li>
+								<li>
+									<a href="#">Iquique</a>
+								</li>
+								<li>
+									<a href="#">Calama</a>
+								</li>
+								<li>
+									<a href="#">Antofagasta</a>
+								</li>
+								<li>
+									<a href="#">Tocopilla</a>
+								</li>
+								<li>
+									<a href="#">Copiapo</a>
+								</li>
+								<li class="nav-header">
+									Otros
+								</li>
+								<li>
+									<a href="#">Beneficios Club de Lectores</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="span10" >
+					<div class="well well-large">
+						<ul class="thumbnails">
+							<li class="span4">
+								<a class="thumbnail" href="#"><img src="./img/xy.jpg" alt="360x270" style="width: 360px; height: 270px;"></a>
+								<h3>Plan Anual</h3>
+								<p>
+									este es un texto de prueba
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$('.navbar li').click(function(e) {
+				$('.navbar li').removeClass('active');
+				var $this = $(this);
+				if (!$this.hasClass('active')) {
+					$this.addClass('active');
+				}
+				e.preventDefault();
+			});
+		</script>
+		<script>
+			$('.navder li').click(function(e) {
+				$('.navder li').removeClass('active');
+				var $this = $(this);
+				if (!$this.hasClass('active')) {
+					$this.addClass('active');
+				}
+				e.preventDefault();
+			});
+		</script>
+	</body>
+</html>
