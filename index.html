@@ -14,7 +14,7 @@
 					<a class="brand" href="#">Ciudades</a>x
 					<div class="nav-collapse collapse navbar-responsive-collapse">
 						<div class="navder">
-							<ul id="ciudades" class="nav nav-list">
+							<ul id="ciudades_phone" class="nav nav-list">
 								<li class="nav-header">
 									Planes de Suscripción
 								</li>
@@ -62,7 +62,7 @@
 										<a href="#">Inicio</a>
 									</li>
 									<li>
-										<a href="#">Preguntas Frecuentes</a>
+										<a href="#" id="preguntas_frecuentes">Preguntas Frecuentes</a>
 									</li>
 									<li>
 										<a href="#">Atencion al Cliente</a>
@@ -115,7 +115,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="span9" >
+				<div class="span9" id="contenido" >
 					<!--<div id="thumbs" class="well well-large">-->
 					<ul class="thumbnails">
 						<li class="span3">
@@ -191,6 +191,7 @@
 		<script>
 			$('.navbar li').click(function(e) {
 				$('.navbar li').removeClass('active');
+				$('.navder li').removeClass('active');
 				var $this = $(this);
 				if (!$this.hasClass('active')) {
 					$this.addClass('active');
@@ -200,6 +201,7 @@
 		</script>
 		<script>
 			$('.navder li').click(function(e) {
+				$('.navbar li').removeClass('active');
 				$('.navder li').removeClass('active');
 				var $this = $(this);
 				if (!$this.hasClass('active')) {
@@ -210,13 +212,27 @@
 		</script>
 		<script>
 			$(document).ready(function() {
-				$('#ciudades').click(function(evento) {
+				$('#arica').click(function(evento) {
 					evento.preventDefault();
-					$('#thumbs').load("./web/arica.html");
+					$('#contenido').load("./web/arica.html");
+
+				});
+				$('#preguntas_frecuentes').click(function(evento) {
+					evento.preventDefault();
+					$('#contenido').load("./web/preguntas_frecuentes.html");
 
 				});
 
 			});
+			/*$(document).ready(function() {
+				$('#preguntas_frecuentes').click(function(evento) {
+					evento.preventDefault();
+					$('#contenido').load("./web/preguntas_frecuentes.html");
+
+				});
+
+			});*/
+			
 		</script>
 	</body>
 </html>
